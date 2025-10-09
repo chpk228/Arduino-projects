@@ -1,6 +1,6 @@
 #include <Stepper.h>
  void seup ()
-
+ void loop setup ()
 const int stepsPerRevolution = 2048;
 const int motorSpeed = 10;
 
