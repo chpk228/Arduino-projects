@@ -1,4 +1,5 @@
 #include <Stepper.h>
+#include <header.h>
  void seup ()
 
 const int stepsPerRevolution = 2048;
