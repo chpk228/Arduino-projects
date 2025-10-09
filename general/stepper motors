@@ -1,0 +1,19 @@
+#include <Stepper.h>
+
+const int stepsPerRevolution = 2048;
+const int motorSpeed = 10;
+
+Stepper myStepper(stepsPerRevolution, 8, 10, 9, 11);
+
+void setup() {
+  myStepper.setSpeed(motorSpeed);
+  Serial.begin(9600);
+  Serial.println("Stepper Motor Running...");
+}
+
+void loop() {
+  myStepper.step(stepsPerRevolution);
+  delay(1000);
+  myStepper.step(-stepsPerRevolution);
+  delay(1000);
+}
