@@ -1,0 +1,10 @@
+
+1. Microcontroller - this is the brain of an Arduino, and is the component that we load programs into. Think of it as a tiny computer, designed to execute only a specific number of things.
+2. USB port - used to connect your Arduino board to a computer.
+3. USB to Serial chip - the USB to Serial is an important component, as it helps translating data that comes from e.g. a computer to the on-board microcontroller. This is what makes it possible to program the Arduino board from your computer.
+4. Digital pins - pins that use digital logic (0,1 or LOW/HIGH). Commonly used for switches and to turn on/off an LED.
+5. Analog pins - pins that can read analog values in a 10 bit resolution (0-1023).
+6. 5V / 3.3V pins- these pins are used to power external components.
+7. GND - also known as ground, negative or simply -, is used to complete a circuit, where the electrical level is at 0 volt.
+8. VIN - stands for Voltage In, where you can connect external power supplies.
+Depending on the Arduino board, you will find many more components. The items listed above are generally found on any Arduino board.
