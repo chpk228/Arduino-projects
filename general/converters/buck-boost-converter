@@ -1,0 +1,16 @@
+const int pwmPin = 9;
+const int feedbackPin = A0;
+const int setPoint = 512;
+
+void setup() {
+  pinMode(pwmPin, OUTPUT);
+}
+
+void loop() {
+  int feedback = analogRead(feedbackPin);
+  int error = setPoint - feedback;
+  int output = constrain(error + 128, 0, 255);
+  analogWrite(pwmPin, output);
+  delay(10);
+}
+
