@@ -1,0 +1,14 @@
+int analogPin = 0;
+int mosfetPin = 6;
+
+void setup() {
+  TCCR0B = TCCR0B & B11111000 | B00000001;
+  pinMode(mosfetPin, OUTPUT);
+}
+
+void loop() {
+  int sensorValue = analogRead(analogPin);
+  int dutyCycle = map(sensorValue, 0, 1023, 0, 255);
+  analogWrite(mosfetPin, dutyCycle);
+  delay(10);
+}
