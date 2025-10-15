@@ -1,0 +1,17 @@
+int x;
+int w;
+
+void setup() {
+  pinMode(6, OUTPUT);
+  pinMode(A1, INPUT);
+  TCCR0B = TCCR0B & B11111000 | B00000001;
+  Serial.begin(9600);
+}
+
+void loop() {
+  x = analogRead(A1);
+  w = map(x, 0, 1023, 0, 255);
+  analogWrite(6, w);
+  Serial.print("w ");
+  Serial.println(w);
+}
