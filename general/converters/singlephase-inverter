@@ -1,0 +1,17 @@
+int out1 = 8;
+int out2 = 7;
+
+void setup() {
+  pinMode(out1, OUTPUT);
+  pinMode(out2, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(out1, HIGH);
+  digitalWrite(out2, LOW);
+  delay(10);
+  digitalWrite(out1, LOW);
+  digitalWrite(out2, HIGH);
+  delay(10);
+}
+
